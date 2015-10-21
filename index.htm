@@ -35,9 +35,10 @@
                     eurLiter = Number(document.getElementById('eurLiter').value),
                     usdGal = (eurUsd * galLiter / eurLiter).toFixed(2),
                     a = document.createElement('p');
+                a.style.textAlign = 'center';
 
                 document.body.appendChild(a);
-                a.innerHTML = eurLiter + ' EUR/Liter ' + ' at ' + eurUsd + ' USD/EUR = ' + usdGal + ' USD/Gallon'
+                a.innerHTML = eurLiter + ' EUR/Liter ' + ' at ' + eurUsd + ' USD/EUR = ' + '<span style="font-weight:bold;">' + usdGal + '</span>' + ' USD/Gallon'
             }
             calc();
         </script>
